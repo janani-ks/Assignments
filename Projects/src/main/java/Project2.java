@@ -8,11 +8,11 @@ class Triangle{
         this.base=b;
         this.height=h;
     } 
-    void perimeter(){
-        System.out.println("Perimeter of Triangle = "+ (side+base+height));
+    double perimeter(){
+        return side+base+height;
     }
-    void area(){
-        System.out.println("Area of Triangle = "+ 0.5*base*height);
+    double area(){
+        return 0.5*base*height;
     }
 }
 class Rectangle{
@@ -22,11 +22,11 @@ class Rectangle{
         this.length=l;
         this.width=w;
     }
-    void perimeter(){
-        System.out.println("Perimeter of Rectangle = "+2*(length+width));
+    double perimeter(){
+        return 2*(length+width);
     }
-    void area(){
-        System.out.println("Area of Rectangle = "+length*width);
+    double area(){
+        return length*width;
     }
 }
 class Circle{
@@ -34,35 +34,42 @@ class Circle{
     Circle(double r){
         this.radius=r;
     }
-    void perimeter(){
-        System.out.println("Perimeter of Circle = "+2*3.14*radius);
+    double perimeter(){
+        return 2*3.14*radius;
     }
-    void area(){
-        System.out.println("Area of Circle = "+3.14*radius*radius);
+    double area(){
+        return 3.14*radius*radius;
     }
 
 }
 public class Project2 {
     public static void main(String[] args) throws Exception {
         Scanner s = new Scanner(System.in);
-        System.out.println("Please enter the choice you want : \n \t 1. Triangle \n \t 2. Rectangle \n \t 3. Circle");
+        logger.log("Please enter the choice you want : \n \t 1. Triangle \n \t 2. Rectangle \n \t 3. Circle");
         int n = s.nextInt();
+        double a1,a2;
         switch(n){
             case 1:
             Triangle t = new Triangle(4,5.6,7);
-            t.perimeter();
-            t.area();
+            a1=t.perimeter();
+            a2=t.area();
+            logger.log("Perimeter of Triangle "+a1);
+            logger.log("Area of Triangle "+a2);
             break;
             case 2:
             Rectangle r = new Rectangle(4.5,9);
-            r.perimeter();
-            r.area();
+            a1=r.perimeter();
+            a2=r.area();
+            logger.log("Perimeter of Rectangle "+a1);
+            logger.log("Area of Rectangle "+a2);
             break;
             case 3:
             Circle c = new Circle(5.4);
-            c.perimeter();
-            c.area();
+            a1=c.perimeter();
+            a2=c.area();
+            logger.log("Perimeter of Circle "+a1);
+            logger.log("Area of Circle "+a2);
             break;
-        }      
+        }    
 }
 }

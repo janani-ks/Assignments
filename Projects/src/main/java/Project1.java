@@ -24,7 +24,7 @@ public class Project1 {
         b.deposite(12000);
         b.withdraw(1000);
         long l = b.display();
-        System.out.println("Your Current Balance is "+l);
+        logger.log("Your Current Balance is "+l);
     }
     
 }

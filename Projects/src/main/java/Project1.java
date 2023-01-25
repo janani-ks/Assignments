@@ -1,10 +1,10 @@
 
 class Bank{
-    private String acc_no;
+    private String accno;
     private String name;
     private long bal;
     Bank(String an,String n,long b){
-        this.acc_no=an;
+        this.accno=an;
         this.name=n;
         this.bal=b;
     }
@@ -14,8 +14,8 @@ class Bank{
     void withdraw(long d){
         this.bal=this.bal-d;
     }
-    void display(){
-        logger.log("YOUR CURRENT BALANCE IS "+this.bal);
+    long display(){
+        return bal;
     }
 }
 public class Project1 {
@@ -23,7 +23,8 @@ public class Project1 {
         Bank b = new Bank("2R44435" , "JANANI" ,200000);
         b.deposite(12000);
         b.withdraw(1000);
-        b.display();
+        long l = b.display();
+        System.out.println("Your Current Balance is "+l);
     }
     
 }

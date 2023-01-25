@@ -15,7 +15,7 @@ class Bank{
         this.bal=this.bal-d;
     }
     void display(){
-        System.out.println("YOUR CURRENT BALANCE IS "+this.bal);
+        logger.log("YOUR CURRENT BALANCE IS "+this.bal);
     }
 }
 public class Project1 {

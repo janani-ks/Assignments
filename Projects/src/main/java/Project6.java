@@ -23,6 +23,7 @@ public class Project6
 		logger.log((c.num).equals(c1.num));
 		logger.log("Credit card Name : "+c3.name+"\nCredit card Number : "+c3.num+"\nExpired Date : "+c3.exdate);
 	    }
-		catch(CloneNotSupportedException c) {}
+		catch(CloneNotSupportedException c) {
+		}
 	}
 }

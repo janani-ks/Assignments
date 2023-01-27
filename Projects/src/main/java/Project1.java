@@ -1,4 +1,4 @@
-package Assignment1;
+
 class Bank{
     private String accno;
     private String name;

@@ -71,6 +71,8 @@ public class Project2 {
             logger.log("Perimeter of Circle "+a1);
             logger.log("Area of Circle "+a2);
             break;
+            default:
+            break;
         }    
 }
 }

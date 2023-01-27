@@ -15,7 +15,8 @@ class BasicPoint implements Cloneable {
 		BasicPoint s1 = (BasicPoint)s.clone();
 		logger.log(s1.x+" "+s1.y);
 		}
-		catch(CloneNotSupportedException c) {}
+		catch(CloneNotSupportedException c) {
+		}
 }
 }
 public class Project5

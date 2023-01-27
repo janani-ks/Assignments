@@ -1,17 +1,17 @@
 class Student{
     private String studentname;
     private String gradelevel;
-    private double CGPA;
+    private double gpa;
     Student(String sn,String gl,double g){
         this.studentname = sn;
         this.gradelevel = gl;
-        this.CGPA = g;
+        this.gpa = g;
     }
     void update(double g){
-        this.CGPA = g;
+        this.gpa = g;
     }
     String print(){
-        return studentname+" has a GPA as "+CGPA;
+        return studentname+" has a GPA as "+gpa;
     }
 }
 public class Project3

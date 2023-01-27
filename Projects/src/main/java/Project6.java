@@ -15,15 +15,11 @@ class Creditcard implements Cloneable{
 
 public class Project6
 {
-	public static void main(String[] args) {
-	    try {
+	public static void main(String[] args) throws CloneNotSupportedException{
 		Creditcard c = new Creditcard("JANANI","35464246562","08-01-2024");
 		Creditcard c1 = new Creditcard("KOKILA","7385657657","17-03-2023");
 		Creditcard c3 = (Creditcard)c.clone();
 		logger.log((c.num).equals(c1.num));
 		logger.log("Credit card Name : "+c3.name+"\nCredit card Number : "+c3.num+"\nExpired Date : "+c3.exdate);
-	    }
-		catch(CloneNotSupportedException c) {
-		}
 	}
 }

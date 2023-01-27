@@ -47,7 +47,8 @@ public class Project2 {
         Scanner s = new Scanner(System.in);
         logger.log("Please enter the choice you want : \n \t 1. Triangle \n \t 2. Rectangle \n \t 3. Circle");
         int n = s.nextInt();
-        double a1,a2;
+        double a1;
+        double a2;
         switch(n){
             case 1:
             Triangle t = new Triangle(4,5.6,7);

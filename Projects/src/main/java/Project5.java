@@ -1,5 +1,6 @@
 class BasicPoint implements Cloneable {
-	String x,y;
+	String x;
+	String y;
 	BasicPoint(String x1,String y1){
 		this.x=x1;
 		this.y=y1;
@@ -10,9 +11,9 @@ class BasicPoint implements Cloneable {
 	static void Clone(){
 		try {
 		BasicPoint s = new BasicPoint("4.6","8");
-		System.out.println((s.x).equals(s.y)); 
+		logger.log((s.x).equals(s.y)); 
 		BasicPoint s1 = (BasicPoint)s.clone();
-		System.out.println(s1.x+" "+s1.y);
+		logger.log(s1.x+" "+s1.y);
 		}
 		catch(CloneNotSupportedException c) {}
 }

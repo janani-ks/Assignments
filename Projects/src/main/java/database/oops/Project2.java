@@ -18,7 +18,7 @@ class Triangle{
         return 0.5*base*height;
     }
     	catch (ArithmeticException a) {
-    		System.out.println("You're multplying by zero!");
+    		logger.log("You're multplying by zero!");
             return 0.0;
         }
     }
@@ -53,7 +53,7 @@ class Circle{
 public class Project2 {
     public static void main(String[] args) throws IOException {
         Scanner s = new Scanner(System.in);
-        System.out.println("Please enter the choice you want : \n \t 1. Triangle \n \t 2. Rectangle \n \t 3. Circle");
+        logger.log("Please enter the choice you want : \n \t 1. Triangle \n \t 2. Rectangle \n \t 3. Circle");
         int n = s.nextInt();
         double a1;
         double a2;
@@ -62,22 +62,22 @@ public class Project2 {
             Triangle t = new Triangle(4.4,5.4,6);
             a1=t.perimeter();
             a2=t.area();
-            System.out.println("Perimeter of Triangle "+a1);
-            System.out.println("Area of Triangle "+a2);
+            logger.log("Perimeter of Triangle "+a1);
+            logger.log("Area of Triangle "+a2);
             break;
             case 2:
             Rectangle r = new Rectangle(4.5,9);
             a1=r.perimeter();
             a2=r.area();
-            System.out.println("Perimeter of Rectangle "+a1);
-            System.out.println("Area of Rectangle "+a2);
+            logger.log("Perimeter of Rectangle "+a1);
+            logger.log("Area of Rectangle "+a2);
             break;
             case 3:
             Circle c = new Circle(5.4);
             a1=c.perimeter();
             a2=c.area();
-            System.out.println("Perimeter of Circle "+a1);
-            System.out.println("Area of Circle "+a2);
+            logger.log("Perimeter of Circle "+a1);
+            logger.log("Area of Circle "+a2);
             break;
             default:
             break;

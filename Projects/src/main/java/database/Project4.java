@@ -1,6 +1,7 @@
 package database;
 import java.sql.*;
 class Connect{
+	String str = "Janani7@";
 	Connection con;
 	private static Connect si = null;
 	private Connect() {	
@@ -12,7 +13,6 @@ class Connect{
     }
 	void newconnect() {	
 		try {
-			String str = "Janani7@";
 			Class.forName("com.mysql.cj.jdbc.Driver"); 
   			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root",str);
   			Statement stmt=con.createStatement();

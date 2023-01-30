@@ -24,10 +24,10 @@ public class Project3
 		float f = Float.parseFloat(s1);
         s.update(f);
         String l = s.print();
-        System.out.println(l);
+        logger.log(l);
 		}
 		catch(NumberFormatException e) {
-            System.out.println("NumberFormatException occurred");
+            logger.log("NumberFormatException occurred");
         }
 	}
 }

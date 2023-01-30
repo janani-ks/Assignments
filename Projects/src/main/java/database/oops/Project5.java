@@ -14,8 +14,8 @@ public class Project5
 {
 	public static void main(String[] args) throws CloneNotSupportedException{
 		BasicPoint s = new BasicPoint("4.6","8");
-		System.out.println((s.x).equals(s.y)); 
+		logger.log((s.x).equals(s.y)); 
 		BasicPoint s1 = (BasicPoint)s.clone();
-		System.out.println(s1.x+" "+s1.y);
+		logger.log(s1.x+" "+s1.y);
 	}
 }

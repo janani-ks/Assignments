@@ -28,7 +28,7 @@ class Bank{
         this.bal=this.bal-d;
     	}
     	else {
-            double needs = d - bal;
+            double needs = double(d - bal);
             throw new InsufficientFundsException(needs);
          }
     	}
@@ -44,10 +44,10 @@ public class Project1 {
         b.withdraw(2000000);
         }
         catch (InsufficientFundsException e) {
-            System.out.println("Sorry, but you are short $" + e.getAmount());
+            logger.log("Sorry, but you are short $" + e.getAmount());
         }
         long l = b.display();
-        System.out.println("Your Current Balance is "+l);
+        logger.log("Your Current Balance is "+l);
     }
     
 }

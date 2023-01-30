@@ -12,25 +12,26 @@ class Connect{
     }
 	void newconnect() {	
 		try {
+			String str = "Janani7@";
 			Class.forName("com.mysql.cj.jdbc.Driver"); 
-  			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","Janani7@");
+  			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root",str);
   			Statement stmt=con.createStatement();
-            System.out.println("inserting records");
+            logger.log("inserting records");
             String sql="Insert into detail values(55,'Nivi')";
             stmt.executeUpdate(sql);
 		}
 		catch(Exception e){
-   		 System.out.println(e);
+   		 logger.log(e);
    		 }
 		
 	}
 	 void close() {
 		 try {
-		 System.out.println("Closes all open connection");
+		 logger.log("Closes all open connection");
 		 con.close();
 		 }
 		 catch(Exception e){
-    		 System.out.println(e);
+    		 logger.log(e);
     		 }
 }
 }

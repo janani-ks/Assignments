@@ -1,7 +1,7 @@
 package bankexception;
 
 public class InsufficientFundsException extends Exception {
-	   double amount; 
+	   final private double amount; 
 	   public InsufficientFundsException(double amount) {
 	      this.amount = amount;
 	   }

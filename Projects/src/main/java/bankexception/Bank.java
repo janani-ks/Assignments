@@ -12,7 +12,6 @@ public class Bank {
 	static boolean storebalance() {
 		Scanner scan = new Scanner(System.in);
 		try {
-		display.print("Balace Amount : ");
     	amount = scan.nextDouble();
     	return false;
 		}
@@ -33,8 +32,9 @@ public class Bank {
     	accountnumber = scan.nextLine();
     	display.print("Account Holder's Name : ");
     	holdername =  scan.nextLine();
+	display.print("Balace Amount : ");
     	while(storebalance()){
-		continue;
+		display.print("Enter Correct Amount : ");
 	}
         Account obj = new Account(accountnumber , holdername ,amount);
         display.println("Enter the choice you want :\n 1.Deposite\n 2.Withdraw \n 3.Check Balance Enquiry");

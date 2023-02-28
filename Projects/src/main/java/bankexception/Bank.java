@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Bank {
 	static PrintStream display=new PrintStream((new FileOutputStream(FileDescriptor.out)));
 	static double amount = 0;
-	static boolean store_balance() {
+	static boolean storebalance() {
 		Scanner scan = new Scanner(System.in);
 		try {
 		display.print("Balace Amount : ");
@@ -33,7 +33,9 @@ public class Bank {
     	accountnumber = scan.nextLine();
     	display.print("Account Holder's Name : ");
     	holdername =  scan.nextLine();
-    	while(store_balance());
+    	while(storebalance()){
+		continue;
+	}
         Account obj = new Account(accountnumber , holdername ,amount);
         display.println("Enter the choice you want :\n 1.Deposite\n 2.Withdraw \n 3.Check Balance Enquiry");
         choice = scan1.nextInt();

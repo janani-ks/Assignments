@@ -27,8 +27,7 @@ public class Points implements Cloneable {
 	}  
 	static Points cloneobj(double x,double y)throws CloneNotSupportedException{
 		Points obj1 = new Points(x,y);
-		Points obj2 = (Points)obj1.clone();
-		return obj2;
+		return (Points)obj1.clone();
 	}
 	static double storedouble() {
 		Scanner scan = new Scanner(System.in);
@@ -41,37 +40,27 @@ public class Points implements Cloneable {
 			return 0;
 		}
 	}
-	public static void main(String[] args) throws CloneNotSupportedException{
-		display.println("Enter x and y axis : ");
+	static double loop() {
 		double x;
-		double y;
 		while(1>0) {
 			x = storedouble();
 			if(b1)
 				break;
 		}
 		b1 = false;
-		while(1>0) {
-			y = storedouble();
-			if(b1)
-				break;
-		}
-		b1 = false;
+		return x;
+	}
+	public static void main(String[] args) throws CloneNotSupportedException{
+		double x;
+		double y;
+		display.println("Enter x and y axis : ");
+		x = loop();
+		y = loop();
 		Points obj = new Points(x,y);
 		display.println("The x and y axis are same : "+obj.equals());
 		display.println("Enter new x and y axis : ");
-		while(1>0) {
-			x = storedouble();
-			if(b1)
-				break;
-		}
-		b1 = false;
-		while(1>0) {
-			y = storedouble();
-			if(b1)
-				break;
-		}
-		b1 = false;
+		x = loop();
+		y = loop();
         obj = Points.cloneobj(x,y);  
         display.println("The new x and y axis are "+obj.x +" and "+obj.y);
         display.println("--------------------X---------------------");

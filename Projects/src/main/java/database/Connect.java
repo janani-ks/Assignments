@@ -21,13 +21,8 @@ public class Connect {
   			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root",pass);
   			Statement stmt=con.createStatement();
             Database.display.println("inserting records");
-            try {
             String sql="Insert into detail values(44,'nivi')";
             stmt.executeUpdate(sql);
-            }
-            catch(Exception e) {
-            String sql="Insert into detail values(66,'nivi')";
-            }
 		}
 		catch(Exception e){
 			Database.display.println(e);

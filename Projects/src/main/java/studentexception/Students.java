@@ -65,6 +65,7 @@ public class Students
 		}
 		b = false;
         obj.update(gpa);
+				break;
 		case 2:
         display.println(obj.print());
         break;
